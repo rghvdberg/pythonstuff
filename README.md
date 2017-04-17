@@ -1,4 +1,4 @@
-##Audio Sample Browser
+## Audio Sample Browser
 
 Sorry, there is no working code yet.
 I'm learning Python. All in planning / study phase now.
@@ -10,7 +10,7 @@ Clicking on a file should play it instantly.
 Double-click opens the file.
 
 
-##Study Sources:
+## Study Sources:
 
 * #### General python
     * <http://interactivepython.org/runestone/static/thinkcspy/index.html>
