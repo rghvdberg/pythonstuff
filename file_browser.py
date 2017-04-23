@@ -54,7 +54,7 @@ window.connect("delete-event", Gtk.main_quit)
 # initialize the filesystem treestore
 fileSystemTreeStore = Gtk.TreeStore(str, Pixbuf, str)
 # populate the tree store
-populateFileSystemTreeStore(fileSystemTreeStore, '/home')
+populateFileSystemTreeStore(fileSystemTreeStore, '/home/rob')
 # initialize the TreeView
 fileSystemTreeView = Gtk.TreeView(fileSystemTreeStore)
 
