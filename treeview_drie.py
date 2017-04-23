@@ -41,10 +41,9 @@ class App(QWidget):
         self.setLayout(windowLayout)
         
         self.show()
-        
+                
     def test(self, signal):
-        print (signal)
-        file_path=self.model().filePath(signal)
+        file_path=self.model.filePath(signal)
         print(file_path)
  
 if __name__ == '__main__':
