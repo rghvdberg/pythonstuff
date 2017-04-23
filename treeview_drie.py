@@ -19,6 +19,9 @@ class App(QWidget):
  
         self.model = QFileSystemModel()
         self.model.setRootPath('/home/rob')
+        filter = ["*.wav","*.ogg"]
+        self.model.setNameFilters(filter)
+        self.model.setNameFilterDisables(0)
         root = self.model.setRootPath('/home/rob')
         #print(root)
         self.tree = QTreeView()
