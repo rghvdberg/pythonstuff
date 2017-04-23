@@ -18,11 +18,11 @@ class App(QWidget):
         self.setGeometry(self.left, self.top, self.width, self.height)
  
         self.model = QFileSystemModel()
-        self.model.setRootPath('/home/rob')
+        self.model.setRootPath('/home/rob/Muziek')
         filter = ["*.wav","*.ogg"]
         self.model.setNameFilters(filter)
         self.model.setNameFilterDisables(0)
-        root = self.model.setRootPath('/home/rob')
+        root = self.model.setRootPath('/home/rob/Muziek')
         #print(root)
         self.tree = QTreeView()
         self.tree.setModel(self.model)
@@ -31,15 +31,21 @@ class App(QWidget):
         self.tree.setAnimated(False)
         self.tree.setIndentation(20)
         self.tree.setSortingEnabled(True)
- 
+        self.tree.doubleClicked.connect(self.test)
+            
         self.tree.setWindowTitle("Dir View")
         self.tree.resize(640, 480)
- 
+        
         windowLayout = QVBoxLayout()
         windowLayout.addWidget(self.tree)
         self.setLayout(windowLayout)
- 
+        
         self.show()
+        
+    def test(self, signal):
+        print (signal)
+        file_path=self.model().filePath(signal)
+        print(file_path)
  
 if __name__ == '__main__':
     app = QApplication(sys.argv)
